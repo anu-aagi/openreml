@@ -40,5 +40,5 @@
 #'
 #' @export
 transform_chain <- function(chain) {
-  torch_openreml$covariance$TransformChain(chain)
+  torch_openreml$covariance$transform$TransformChain(chain)
 }

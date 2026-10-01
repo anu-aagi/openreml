@@ -3,7 +3,7 @@
 #' Creates a `TransformIdentity` object that leaves its input unchanged.
 #'
 #' @return An object of S3 class
-#' `torch_openreml.covariance.TransformIdentity`.
+#' `torch_openreml.covariance.transform.TransformIdentity`.
 #'
 #' @seealso
 #' See the [online documentation for `TransformIdentity`](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.transform.TransformIdentity)
@@ -26,5 +26,5 @@
 #'
 #' @export
 transform_identity <- function() {
-  torch_openreml$covariance$TransformIdentity()
+  torch_openreml$covariance$transform$TransformIdentity()
 }
