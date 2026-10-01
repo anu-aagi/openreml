@@ -21,6 +21,32 @@ tensor <- function(x, dtype = NULL, device = NULL, ...) {
 }
 
 
+# tensor1d ----------------------------------------------------------------
+
+#' Create a one-dimensional PyTorch tensor
+#'
+#' Creates a PyTorch tensor from the supplied data by calling
+#' `torch.tensor()` and reshapes the result to one dimension using
+#' `Tensor.reshape(-1)`. A scalar input is converted to a tensor of length
+#' one.
+#'
+#' See the [PyTorch online documentation](https://pytorch.org/docs/stable/generated/torch.tensor.html)
+#' for details on creating tensors and
+#' [`Tensor.reshape()`](https://pytorch.org/docs/stable/generated/torch.Tensor.reshape.html)
+#' for details on reshaping tensors.
+#'
+#' @param x Data from which to create the tensor.
+#' @param dtype Optional PyTorch data type.
+#' @param device Optional device on which to create the tensor, such as
+#'   `"cpu"`, `"cuda"`, or `"mps"`.
+#' @param ... Additional arguments passed to `torch.tensor()`.
+#'
+#' @return A one-dimensional Python PyTorch tensor.
+#' @export
+tensor1d <- function(x, dtype = NULL, device = NULL, ...) {
+  torch$tensor(x, device = device, dtype = dtype, ...)$reshape(-1L)
+}
+
 
 # as.matrix ---------------------------------------------------------------
 

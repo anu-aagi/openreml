@@ -26,13 +26,13 @@
 #' \dontrun{
 #' n <- 50
 #' p <- 2
-#' y <- tensor(array(rnorm(n)))
-#' x <- tensor(matrix(rnorm(n * p), nrow = n))
-#' theta <- tensor(array(0.0))
+#' y <- tensor(rnorm(n))
+#' x <- tensor(matrix(rnorm(n * p), nrow = n), dtype = torch$float32)
+#' theta <- tensor1d(0.0)
 #'
 #' mat <- scalar_matrix(n)
 #' reml <- marginal_reml(mat)
-#' result <- reml$optimize(y, x, theta, verbose = 2L)
+#' result <- reml$optimize(y, x, theta, verbose = 2)
 #' result[[1]]
 #' result[[2]]
 #'

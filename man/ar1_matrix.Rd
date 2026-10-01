@@ -39,8 +39,8 @@ mat$grad(free_params)
 mat$set_param_specs("rho", fixed = TRUE)
 
 mat$free_param_names
-mat(tensor(array(0.5)))
-mat$grad(tensor(array(0.5)))
+mat(tensor1d(0.5))
+mat$grad(tensor1d(0.5))
 }
 
 }

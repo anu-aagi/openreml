@@ -21,7 +21,7 @@
 #' mat <- scalar_matrix(3)
 #' mat
 #'
-#' free_params <- tensor(array(0.5))
+#' free_params <- tensor1d(0.5)
 #' mat(free_params)
 #'
 #' mat$grad(free_params)
@@ -31,7 +31,7 @@
 #'   param_specs = list(
 #'     a = list(
 #'       fixed = TRUE,
-#'       default = tensor(array(2)),
+#'       default = tensor1d(2),
 #'       trans = transform_identity()
 #'     )
 #'   )

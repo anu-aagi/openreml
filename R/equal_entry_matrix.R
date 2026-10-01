@@ -35,7 +35,7 @@
 #' mat <- equal_entry_matrix(3)
 #' mat
 #'
-#' free_params <- tensor(0.5)
+#' free_params <- tensor1d(0.5)
 #' mat(free_params)
 #'
 #' mat$grad(free_params)

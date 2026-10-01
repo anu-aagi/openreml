@@ -46,9 +46,9 @@
 #' mat()
 #'
 #' mat(list(
-#'   theta_0 = tensor(array(2.0)),
-#'   theta_1 = tensor(array(3.0)),
-#'   theta_2 = tensor(array(4.0))
+#'   theta_0 = tensor1d(2.0),
+#'   theta_1 = tensor1d(3.0),
+#'   theta_2 = tensor1d(4.0)
 #' ))
 #'
 #' mat$grad(tensor(c(1.0, 2.0, 3.0)))

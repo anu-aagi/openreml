@@ -23,7 +23,7 @@
 #' \dontrun{
 #' n <- 4
 #' op <- hadamard_product(a = equicorrelation_matrix(n), b = tensor(array(5.0)))
-#' free_params <- tensor(array(1.0))
+#' free_params <- tensor1d(1.0)
 #' op(free_params)
 #'
 #' grad_result <- op$grad(free_params)
