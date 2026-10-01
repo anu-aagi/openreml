@@ -4,8 +4,10 @@
 #' Create a PyTorch tensor
 #'
 #' Creates a PyTorch tensor from the supplied data by calling
-#' [`torch.tensor()`](https://pytorch.org/docs/stable/generated/torch.tensor.html).
-#'
+#' `torch.tensor()`. See the
+#' [PyTorch online documentation](https://pytorch.org/docs/stable/generated/torch.tensor.html)
+#' for details.
+#' 
 #' @param x Data from which to create the tensor.
 #' @param dtype Optional PyTorch data type.
 #' @param device Optional device on which to create the tensor, such as

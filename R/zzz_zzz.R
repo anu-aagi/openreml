@@ -6,17 +6,12 @@ load_torch_openreml <- function() {
   if (is.null(.state$torch_openreml)) {
     .state$torch_openreml <- reticulate::import("torch_openreml",
                                                 convert = FALSE,
-                                                delay_load = list(environment = c("torch-openreml", "r-torch-openreml")))
+                                                delay_load = list(environment = c("torch-openreml", "r-torch-openreml"),
+                                                                  on_load = function() {
+                                                                    config <- reticulate::py_config()
+                                                                    cli::cli_alert_success("Loaded {.pkg torch-openreml} using Python: {.val {config$python}}.")
+                                                                  }))
     
-    .state$torch <- reticulate::import("torch",
-                                       convert = FALSE,
-                                       delay_load = list(environment = c("torch-openreml", "r-torch-openreml")))
-    
-    config <- reticulate::py_config()
-    
-    cli::cli_alert_success("The {.pkg torch-openreml} Python library has been loaded.")
-    cli::cli_alert_success("The {.pkg torch} Python library has been loaded.")
-    cli::cli_alert_info("Using Python: {.val {config$python}}")
   }
   
   .state$torch_openreml
@@ -72,20 +67,14 @@ NULL
 # load_torch --------------------------------------------------------------
 
 load_torch <- function() {
-  if (is.null(.state$torch_openreml) || is.null(.state$torch)) {
-    .state$torch_openreml <- reticulate::import("torch_openreml",
-                                                convert = FALSE,
-                                                delay_load = list(environment = c("torch-openreml", "r-torch-openreml")))
-    
+  if (is.null(.state$torch)) {
     .state$torch <- reticulate::import("torch",
                                        convert = FALSE,
-                                       delay_load = list(environment = c("torch-openreml", "r-torch-openreml")))
-    
-    config <- reticulate::py_config()
-    
-    cli::cli_alert_success("The {.pkg torch-openreml} Python library has been loaded.")
-    cli::cli_alert_success("The {.pkg torch} Python library has been loaded.")
-    cli::cli_alert_info("Using Python: {.val {config$python}}")
+                                       delay_load = list(environment = c("torch-openreml", "r-torch-openreml"),
+                                                         on_load = function() {
+                                                           config <- reticulate::py_config()
+                                                           cli::cli_alert_success("Loaded {.pkg torch} using python: {.val {config$python}}.")
+                                                         }))
   }
   
   .state$torch
