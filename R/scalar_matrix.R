@@ -1,10 +1,13 @@
-#' Create a scalar matrix
+#' Create a scalar covariance matrix
 #'
-#' Creates a `ScalarMatrix` object representing a scalar matrix of the
-#' specified dimension.
+#' Creates a `ScalarMatrix` object representing a scalar covariance matrix
+#' with a single variance parameter applied to every diagonal entry. The
+#' variance parameter is transformed to a positive value using
+#' `TransformExpPow2` by default. Off-diagonal entries are always zero.
 #'
-#' @param n The dimension of the scalar matrix.
-#' @param param_specs Optional parameter specifications for the scalar matrix.
+#' @param n The dimension of the scalar covariance matrix.
+#' @param param_specs Optional parameter specifications for the scalar
+#'   covariance matrix.
 #'
 #' @return An object of S3 class
 #' `torch_openreml.covariance.scalar_matrix.ScalarMatrix`.
@@ -33,7 +36,7 @@
 #'     )
 #'   )
 #' )
-#' 
+#'
 #' x
 #' x()
 #' x$grad()
