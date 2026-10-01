@@ -21,21 +21,21 @@ order, while the inverse transformation applies them in reverse order.
 }
 \examples{
 \dontrun{
-t <- transform_chain(list(
+t <- transform_chain(c(
   transform_exp(),
   transform_pow(factor = 2.0)
 ))
 x <- tensor(1.0)
 t(x)
 
-t <- transform_chain(list(
+t <- transform_chain(c(
   transform_exp(),
   transform_pow(factor = 2.0)
 ))
 x <- tensor(4.0)
 t$inverse(x)
 
-t <- transform_chain(list(
+t <- transform_chain(c(
   transform_exp(),
   transform_pow(factor = 2.0)
 ))
