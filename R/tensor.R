@@ -39,11 +39,11 @@ tensor <- function(x, dtype = NULL, device = NULL, ...) {
 #'
 #' @export
 as.matrix.torch.Tensor <- function(x, ...) {
-  reticulate::py_to_r(x$detach()$cpu()$numpy()$copy())
+  reticulate::py_to_r(x$detach()$cpu()$clone()$numpy())
 }
 
 #' @rdname as_matrix_array.torch.Tensor
 #' @export
 as.array.torch.Tensor <- function(x, ...) {
-  reticulate::py_to_r(x$detach()$cpu()$numpy()$copy())
+  reticulate::py_to_r(x$detach()$cpu()$clone()$numpy())
 }
