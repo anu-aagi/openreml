@@ -1,6 +1,6 @@
-Package: bandicoot
+Package: openreml
 Type: Package
-Title: Light-Weight 'python'-Like Object-Oriented System
+Title: R bindings for torch-openreml
 Version: 1.0.1
 Authors@R: 
     person(given = "Weihao",
@@ -16,7 +16,8 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     cli,
-    utils
+    utils,
+    reticulate
 Suggests: 
     covr,
     knitr,
