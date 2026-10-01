@@ -8,7 +8,7 @@ transform_identity()
 }
 \value{
 An object of S3 class
-\code{torch_openreml.covariance.TransformIdentity}.
+\code{torch_openreml.covariance.transform.TransformIdentity}.
 }
 \description{
 Creates a \code{TransformIdentity} object that leaves its input unchanged.
