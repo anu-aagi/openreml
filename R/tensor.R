@@ -21,19 +21,29 @@ tensor <- function(x, dtype = NULL, device = NULL, ...) {
 }
 
 
-# as.matrix.torch.Tensor --------------------------------------------------
 
-#' Coerce a PyTorch tensor to a matrix
+# as.matrix ---------------------------------------------------------------
+
+#' Coerce a PyTorch tensor to an R matrix or array
 #'
-#' Converts a PyTorch tensor to an R matrix. The tensor is detached from
-#' the computation graph and moved to the CPU before conversion.
+#' Converts a PyTorch tensor to an R matrix or array. The tensor is detached
+#' from the computation graph and moved to the CPU before conversion.
 #'
 #' @param x A PyTorch tensor.
 #' @param ... Additional arguments, currently unused.
 #'
-#' @return An R matrix containing the values of `x`.
+#' @return An R matrix or array containing the values of `x`.
+#'
+#' @name as_matrix_array.torch.Tensor
+#' @rdname as_matrix_array.torch.Tensor
 #'
 #' @export
 as.matrix.torch.Tensor <- function(x, ...) {
+  reticulate::py_to_r(x$detach()$cpu()$numpy()$copy())
+}
+
+#' @rdname as_matrix_array.torch.Tensor
+#' @export
+as.array.torch.Tensor <- function(x, ...) {
   reticulate::py_to_r(x$detach()$cpu()$numpy()$copy())
 }
