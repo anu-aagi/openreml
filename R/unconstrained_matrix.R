@@ -21,7 +21,7 @@
 #'   matrix.
 #'
 #' @return An object of S3 class
-#' `torch_openreml.covariance.unconstrainedmatrix.UnconstrainedMatrix`.
+#' `torch_openreml.covariance.unconstrained_matrix.UnconstrainedMatrix`.
 #'
 #' @seealso
 #' See the [online documentation for `UnconstrainedMatrix`](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.unconstrainedmatrix#torch_openreml.covariance.UnconstrainedMatrix)

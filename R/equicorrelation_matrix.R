@@ -20,7 +20,7 @@
 #'   matrix.
 #'
 #' @return An object of S3 class
-#' `torch_openreml.covariance.equicorrelationmatrix.EquicorrelationMatrix`.
+#' `torch_openreml.covariance.equicorrelation_matrix.EquicorrelationMatrix`.
 #'
 #' @seealso
 #' See the [online documentation for `EquicorrelationMatrix`](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.equicorrelationmatrix#torch_openreml.covariance.EquicorrelationMatrix)

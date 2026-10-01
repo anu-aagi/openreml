@@ -13,7 +13,7 @@
 #'   matrix.
 #'
 #' @return An object of S3 class
-#' `torch_openreml.covariance.ar1matrix.AR1Matrix`.
+#' `torch_openreml.covariance.ar1_matrix.AR1Matrix`.
 #'
 #' @seealso
 #' See the [online documentation for `AR1Matrix`](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.ar1matrix#torch_openreml.covariance.AR1Matrix)
