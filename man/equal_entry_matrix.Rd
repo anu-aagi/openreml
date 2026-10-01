@@ -16,7 +16,7 @@ matrix.}
 }
 \value{
 An object of S3 class
-\code{torch_openreml.covariance.equalentrymatrix.EqualEntryMatrix}.
+\code{torch_openreml.covariance.equal_entry_matrix.EqualEntryMatrix}.
 }
 \description{
 Creates an \code{EqualEntryMatrix} object representing an \verb{n x m} matrix with a

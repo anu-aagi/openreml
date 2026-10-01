@@ -14,7 +14,7 @@ matrix.}
 }
 \value{
 An object of S3 class
-\code{torch_openreml.covariance.equicorrelationmatrix.EquicorrelationMatrix}.
+\code{torch_openreml.covariance.equicorrelation_matrix.EquicorrelationMatrix}.
 }
 \description{
 Creates an \code{EquicorrelationMatrix} object representing an equicorrelation

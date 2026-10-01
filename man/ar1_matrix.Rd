@@ -14,7 +14,7 @@ matrix.}
 }
 \value{
 An object of S3 class
-\code{torch_openreml.covariance.ar1matrix.AR1Matrix}.
+\code{torch_openreml.covariance.ar1_matrix.AR1Matrix}.
 }
 \description{
 Creates an \code{AR1Matrix} object representing a first-order autoregressive

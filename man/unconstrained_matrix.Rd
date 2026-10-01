@@ -14,7 +14,7 @@ matrix.}
 }
 \value{
 An object of S3 class
-\code{torch_openreml.covariance.unconstrainedmatrix.UnconstrainedMatrix}.
+\code{torch_openreml.covariance.unconstrained_matrix.UnconstrainedMatrix}.
 }
 \description{
 Creates an \code{UnconstrainedMatrix} object representing a full symmetric
