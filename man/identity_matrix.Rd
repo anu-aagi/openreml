@@ -18,6 +18,6 @@ Creates an \code{IdentityMatrix} object representing an identity matrix of the
 specified dimension.
 }
 \seealso{
-See the \href{https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.identitymatrix#torch_openreml.covariance.IdentityMatrix}{online documentation}
-for \code{IdentityMatrix}.
+See the \href{https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.identitymatrix#torch_openreml.covariance.IdentityMatrix}{online documentation for \code{IdentityMatrix}}
+for details about the corresponding Python class.
 }
