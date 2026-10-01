@@ -19,6 +19,33 @@ An object of S3 class
 Creates a \code{ScalarMatrix} object representing a scalar matrix of the
 specified dimension.
 }
+\examples{
+\dontrun{
+mat <- scalar_matrix(3)
+mat
+
+free_params <- tensor(array(0.5))
+mat(free_params)
+
+mat$grad(free_params)
+
+x <- scalar_matrix(
+  3,
+  param_specs = list(
+    a = list(
+      fixed = TRUE,
+      default = tensor(array(2)),
+      trans = transform_identity()
+    )
+  )
+)
+
+x
+x()
+x$grad()
+}
+
+}
 \seealso{
 See the \href{https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.scalarmatrix#torch_openreml.covariance.ScalarMatrix}{online documentation for \code{ScalarMatrix}}
 for details about the corresponding Python class.
