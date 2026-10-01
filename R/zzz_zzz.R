@@ -23,9 +23,9 @@ load_torch_openreml <- function() {
 #' `torch_openreml` is an active binding that lazily imports the
 #' `torch_openreml` Python module when it is first accessed.
 #'
-#' The module is imported with `convert = FALSE`, so Python objects are
-#' returned as Python objects rather than being automatically converted to
-#' R objects by reticulate.
+#' The module is imported with `convert = TRUE`, so supported Python objects
+#' are automatically converted to their corresponding R objects by
+#' reticulate where possible.
 #'
 #' By default, the import uses reticulate's delayed environment selection,
 #' with `torch-openreml` and `r-torch-openreml` as the preferred environment
