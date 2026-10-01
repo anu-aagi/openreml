@@ -2,6 +2,7 @@
 
 S3method(as.array,torch.Tensor)
 S3method(as.matrix,torch.Tensor)
+export(diagonal_matrix)
 export(identity_matrix)
 export(install_torch_openreml)
 export(scalar_matrix)

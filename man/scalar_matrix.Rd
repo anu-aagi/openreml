@@ -2,22 +2,25 @@
 % Please edit documentation in R/scalar_matrix.R
 \name{scalar_matrix}
 \alias{scalar_matrix}
-\title{Create a scalar matrix}
+\title{Create a scalar covariance matrix}
 \usage{
 scalar_matrix(n, param_specs = NULL)
 }
 \arguments{
-\item{n}{The dimension of the scalar matrix.}
+\item{n}{The dimension of the scalar covariance matrix.}
 
-\item{param_specs}{Optional parameter specifications for the scalar matrix.}
+\item{param_specs}{Optional parameter specifications for the scalar
+covariance matrix.}
 }
 \value{
 An object of S3 class
 \code{torch_openreml.covariance.scalar_matrix.ScalarMatrix}.
 }
 \description{
-Creates a \code{ScalarMatrix} object representing a scalar matrix of the
-specified dimension.
+Creates a \code{ScalarMatrix} object representing a scalar covariance matrix
+with a single variance parameter applied to every diagonal entry. The
+variance parameter is transformed to a positive value using
+\code{TransformExpPow2} by default. Off-diagonal entries are always zero.
 }
 \examples{
 \dontrun{
