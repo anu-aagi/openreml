@@ -9,8 +9,8 @@
 #' `torch_openreml.covariance.identity_matrix.IdentityMatrix`.
 #'
 #' @seealso
-#' See the [online documentation](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.identitymatrix#torch_openreml.covariance.IdentityMatrix)
-#' for `IdentityMatrix`.
+#' See the [online documentation for `IdentityMatrix`](https://torch-openreml.patrickli.org/generated/torch_openreml.covariance.identitymatrix#torch_openreml.covariance.IdentityMatrix)
+#' for details about the corresponding Python class.
 #' 
 #' @export
 identity_matrix <- function(n) {
