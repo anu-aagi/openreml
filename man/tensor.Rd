@@ -21,5 +21,7 @@ A Python PyTorch tensor.
 }
 \description{
 Creates a PyTorch tensor from the supplied data by calling
-\href{https://pytorch.org/docs/stable/generated/torch.tensor.html}{\code{torch.tensor()}}.
+\code{torch.tensor()}. See the
+\href{https://pytorch.org/docs/stable/generated/torch.tensor.html}{PyTorch online documentation}
+for details.
 }
